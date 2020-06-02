@@ -21,7 +21,7 @@ function loadProlog() {
     //OutPut de la respuesta de Prolog
     function inform(msg) {
         var title = "Este test se ha realizado con el Lenguaje de Programación Prolog, \n\n\
-                    bajo un Sistema Experto con Inteligencia Artificial.";
+                    bajo un Sistema Experto con Inteligencia Artifical.";
 
         var res = msg.split("X = '");
         var msg = res[1];
@@ -30,11 +30,10 @@ function loadProlog() {
         
         var cuerpo = "Resultado: "+ msg;
         
-
         $(".modal-body #ln1").text(title );
         $(".modal-body #ln2").text(cuerpo);
         $("#ventana").modal('show');
-        document.getElementById('show_result1').innerHTML += '<div>' + cuerpo + '</div>';
+        document.getElementById('show_result1').innerHTML = '<div class="center">' + cuerpo + '</div>';
     }
 
     //Funcion answer para obtener la respuesta de Prolog

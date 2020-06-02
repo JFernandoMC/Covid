@@ -5,8 +5,8 @@ $('#radioBtn a').on('click', function () {
 
     $('a[data-toggle="' + tog + '"]').not('[data-title="' + sel + '"]').removeClass('active').addClass('notActive');
     $('a[data-toggle="' + tog + '"][data-title="' + sel + '"]').removeClass('notActive').addClass('active');
-
 });
+
 function validar(){
     var p1 = document.getElementById("p1").value;
     var p2 = document.getElementById("p2").value;
@@ -23,11 +23,13 @@ function validar(){
     if(p1==="" || p2==="" || p3==="" || p4==="" || p5===""  || p6==="" 
                || p7==="" || p8==="" || p9==="" || p10==="" || p11==="" ){
            
-        
         $(".modal-body #ln1").text("Falta alguna pregunta por marcar!");        
         $("#ventana").modal('show');
     }
     else{
         loadProlog();
     }
+    
+    
+    
 }
